@@ -33,7 +33,7 @@ Details
 
 The class itself is short and sweet, and you can treat the code as documentation. But for convenience, here are the included attributes and methods:
 
-#### Attributes ####
+### Attributes ###
 
 **$table**: Full name of primary database table.
 **$data**: Internal data storage.
@@ -142,19 +142,19 @@ Deletes all internal errors.
 Deletes all internal data.
 
 
-#### Simple JOINs ####
+### Simple JOINs ###
 
 If you pass an additional array to the ->query() function, it will attempt to LEFT JOIN using the supplied keys and values, like so:
 
 ```$Obj->query(array('food' => 'tacos'), array('other_table', 'other_table.linking_id = main_table.id'), '*')```
 
 
-#### Complex Data Relationships ####
+### Complex Data Relationships ###
 
 The simple way to use this class is for small wrappers for specific tables. However, you can also use it for complex multi-table relationships, by creating your own functions for specific queries, and/or over-riding the standard functions such as ->query() and ->save().
 
 
-#### Saving Multi-Table Data ####
+### Saving Multi-Table Data ###
 
 If you are retrieving fields other than your primary table, whether via JOINs, custom queries, or SQL functions such as SUM(), you will need to specify which fields to update when using the ->save() function, like so:
 
@@ -163,7 +163,7 @@ If you are retrieving fields other than your primary table, whether via JOINs, c
 By default, ->save() will attempt to save all fields it finds, which works great with single-table data, but otherwise will throw an error.
 
 
-#### One Last Thing ####
+### One Last Thing ###
 
 You can choose on a per-model basis whether or not to use this model class, if so desired. To use CodeIgniter's vanilla model, just use ```class User extends CI_Model``` just like normal.
 
