@@ -36,8 +36,11 @@ The class itself is short and sweet, and you can treat the code as documentation
 ### Attributes ###
 
 **$table**: Full name of primary database table.
+
 **$data**: Internal data storage.
+
 **$errors**: Internal array of errors. Error strings are recommended, but can be numbers, arrays, or objects if desired.
+
 **$validation**: An optional array for CodeIgniter's [Form Validation](http://ellislab.com/codeigniter/user-guide/libraries/form_validation.html) functionality. Allows you to keep validation rules in the model instead of the controller.
 
 
