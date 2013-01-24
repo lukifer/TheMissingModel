@@ -37,15 +37,10 @@ class MY_Model extends CI_Model {
 	
 	
 	# Simple WHERE + LEFT JOIN. More complicated queries should use ->sql(), or custom functions
-	public function query($where, $join = array(), $select = '*')
+	public function query($where, $select = '*', $join = array())
 	{
-		if(is_string($join))
-		{
-			$select = $join;
-			$join = array();
-		}
-	
-		$this->db->select($select);
+		# If we're joining, assume that we don't want a protected SELECT statement
+		$this->db->select($select, empty($join));
 	
 		if(is_numeric($where))
 			$this->db->where($this->table.'.'.$this->primaryKey, $where)->limit(1);
