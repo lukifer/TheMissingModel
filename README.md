@@ -47,6 +47,7 @@ The class itself is short and sweet, and you can treat the code as documentation
 
 Populates internal data with results of SQL query.
 
+
 **query(array('field_name' => 'some_value'), 'field1, field2')**
 
 Simple WHERE queries, and optional SELECT.
@@ -54,27 +55,40 @@ Simple WHERE queries, and optional SELECT.
 - - -
 
 **getAll()**
+
 Return array of all internal data.
 
+
 **getOne()**
+
 Return a single item and increment counter. Useful for looping.
 
+
 **get(5)**
+
 Get a specific item if present. Internal data is numerically indexed, starting at zero.
 
+
 **getIndexed()**
+
 Retrieve all data, indexed by primary key or the supplied field
 
+
 **getKeyValue('some_field')**
+
 Create key-value pairs from internal data. Useful for populating <option> elements. Defaults to array('id' => 'name').
 
+
 **rewind()**
+
 Reset the internal counter for getOne().
 
 - - -
 
 **indexArray()**
+
 Utility function. Does the same thing as getIndexed(), but on any array.
+
 
 **keyValue()**
 Utility function. Does the same thing as getKeyValue(), but on any array.
@@ -82,34 +96,49 @@ Utility function. Does the same thing as getKeyValue(), but on any array.
 - - -
 
 **value('some_field')**
+
 Get the desired field for the current item in the array (usually the first).
 
+
 **setValue('some_field', 'a value')**
+
 Set the desired field for the current item in the array (usually the first).
 
 - - -
 
 **save()**
+
 Save all internal data to database. Intelligently UPDATEs or INSERTs based upon the presence of a primary key in the data.
 
+
 **insert(array('some_field' => 'a value'))**
+
 INSERT supplied array into database, and load into internal data, including the resultant primary key.
 
 - - -
 
 **validate()**
+
 Wrapper for CodeIgniter's Form Validation run() function. Uses rules set in the $validation attribute.
 
+
 **error("Something happened")**
+
 Adds an error to the internal error stack.
 
+
 **success()**
+
 Returns true if there are no internal errors.
 
+
 **clearErrors()**
+
 Deletes all internal errors.
 
+
 **clear()**
+
 Deletes all internal data.
 
 
