@@ -65,7 +65,7 @@ The class itself is short and sweet, and you can treat the code as documentation
 **```getIndexed()```**: Retrieve all data, indexed by primary key or the supplied field
 
 
-**```getKeyValue('some_field')```**: Create key-value pairs from internal data. Useful for populating <option> elements. Defaults to array('id' => 'name').
+**```getKeyValue('some_field')```**: Create key-value pairs from internal data. Useful for populating \<option\> elements. Defaults to array('id' => 'name').
 
 
 **```rewind()```**: Reset the internal counter for getOne().
