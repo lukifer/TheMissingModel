@@ -11,7 +11,7 @@ Getting Started
 
 - Add MY_Model.php to your "application/core" folder (create it if it does not exist).
 
-- Create your models objects as subclasses of MY_Model, like so: ```class User extends MY_Model```
+- Create your model classes as subclasses of MY_Model, like so: ```class User extends MY_Model```
 
 - See the [CI User Guide](http://ellislab.com/codeigniter/user-guide/general/creating_libraries.html) for more details.
 

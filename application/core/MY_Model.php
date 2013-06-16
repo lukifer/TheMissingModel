@@ -130,7 +130,7 @@ class MY_Model extends CI_Model {
 	public function getKeyValue($nameField = 'name', $keyField = false)
 	{	
 		if($keyField === false) $keyField = $this->primaryKey;
-		return $this->createKeyValue($this->data, $nameField, $keyField);
+		return $this->keyValue($this->data, $nameField, $keyField);
 	}
 
 
